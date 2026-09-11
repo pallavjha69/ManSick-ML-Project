@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ManSick </title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<a id="top"></a>
+
+<header class="site-nav">
+  <div class="nav-inner">
+    <a href="#top" class="brand-mark">ManSick</a>
+
+    <nav id="nav-links" class="nav-links" aria-label="Primary">
+      <a href="#check">Check</a>
+      <a href="#about">About</a>
+      <a href="#tips">Tips</a>
+      <a href="#videos">Videos</a>
+      <a href="#blog">Blog</a>
+    </nav>
+
+    <button id="nav-toggle" class="nav-toggle" aria-expanded="false" aria-controls="nav-links">
+      <span></span><span></span><span></span>
+      <span class="sr-only">Menu</span>
+    </button>
+  </div>
+</header>
+
+<main>
+
+  <div class="page">
+    <section id="check" class="layout">
+
+      <div class="intro">
+        <h1>How are you,<br>really?</h1>
+        <p class="intro-copy">
+          A few honest questions about your screen time, sleep, and stress —
+          turned into one signal you can actually read.
+        </p>
+
+        <div class="score-meter" id="score-meter">
+          <div class="meter-tag zone-neutral" id="meter-tag">
+            <span class="meter-tag-label">Your score is</span>
+            <span class="meter-tag-value" id="meter-tag-value">—</span>
+          </div>
+          <div class="meter-frame">
+            <div class="meter-track"></div>
+          </div>
+        </div>
+
+        <div class="warning-box" role="note">
+          <svg viewBox="0 0 24 24" class="warning-icon" aria-hidden="true">
+            <path d="M12 3 L22 20 H2 Z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+            <line x1="12" y1="9.5" x2="12" y2="14" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+            <circle cx="12" cy="16.8" r="1" fill="currentColor"/>
+          </svg>
+          <p>
+            This is a  not a clinical instrument. If you're struggling, please reach out to a
+            mental health professional or someone you trust.
+            
+          </p>
+        </div>
+      </div>
+
+      <div class="panel" aria-label="Assessment">
+
+        <form id="assessment-form" class="card" novalidate>
+
+          <fieldset>
+            <legend>About you</legend>
+            <div class="field-grid">
+
+              <div class="field">
+                <label for="age">Age</label>
+                <input type="number" id="age" name="age" min="1" max="120" step="1" required placeholder="21">
+              </div>
+
+              <div class="field">
+                <label for="gender">Gender</label>
+                <select id="gender" name="gender" required>
+                  <option value="" disabled selected>Choose one</option>
+                  <option value="Male">Male</option>
+                  <option value="Female">Female</option>
+                  <option value="Other">Other</option>
+                </select>
+              </div>
+
+              <div class="field">
+                <label for="country">Country</label>
+                <select id="country" name="country" required>
+                  <option value="" disabled selected>Choose one</option>
+                  <option value="Other">Other</option>
+                  <option value="India">India</option>
+                  <option value="USA">USA</option>
+                  <option value="Canada">Canada</option>
+                  <option value="Australia">Australia</option>
+                  <option value="UK">UK</option>
+                  <option value="Germany">Germany</option>
+                  <option value="Mexico">Mexico</option>
+                  <option value="Turkey">Turkey</option>
+                  <option value="France">France</option>
+                </select>
+              </div>
+
+              <div class="field">
+                <label for="academic_level">Academic level</label>
+                <select id="academic_level" name="academic_level" required>
+                  <option value="" disabled selected>Choose one</option>
+                  <option value="High School">High School</option>
+                  <option value="Undergraduate">Undergraduate</option>
+                  <option value="Graduate">Graduate</option>
+                </select>
+              </div>
+
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>Digital habits</legend>
+            <div class="field-grid">
+
+              <div class="field">
+                <label for="most_used_platform">Most-used platform</label>
+                <select id="most_used_platform" name="most_used_platform" required>
+                  <option value="" disabled selected>Choose one</option>
+                  <option value="Facebook">Facebook</option>
+                  <option value="Instagram">Instagram</option>
+                  <option value="TikTok">TikTok</option>
+                  <option value="Snapchat">Snapchat</option>
+                  <option value="Twitter">Twitter</option>
+                  <option value="YouTube">YouTube</option>
+                  <option value="WhatsApp">WhatsApp</option>
+                  <option value="WeChat">WeChat</option>
+                  <option value="LinkedIn">LinkedIn</option>
+                  <option value="LINE">LINE</option>
+                  <option value="KakaoTalk">KakaoTalk</option>
+                  <option value="VKontakte">VKontakte</option>
+                </select>
+              </div>
+
+              <div class="field">
+                <label for="purpose_of_use">Main purpose of use</label>
+                <select id="purpose_of_use" name="purpose_of_use" required>
+                  <option value="" disabled selected>Choose one</option>
+                  <option value="Networking">Networking</option>
+                  <option value="Education">Education</option>
+                  <option value="Entertainment">Entertainment</option>
+                  <option value="News">News</option>
+                </select>
+              </div>
+
+              <div class="field">
+                <label for="avg_daily_usage_hours">Average daily usage <span>(hours)</span></label>
+                <input type="number" id="avg_daily_usage_hours" name="avg_daily_usage_hours" min="0" max="24" step="0.1" required placeholder="4.5">
+              </div>
+
+              <div class="field">
+                <label for="daily_unlocks">Daily phone unlocks</label>
+                <input type="number" id="daily_unlocks" name="daily_unlocks" min="0" step="1" required placeholder="60">
+              </div>
+
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>Daily rhythm</legend>
+            <div class="field-grid">
+
+              <div class="field">
+                <label for="study_hours">Study hours <span>(hours)</span></label>
+                <input type="number" id="study_hours" name="study_hours" min="0" max="24" step="0.1" required placeholder="3">
+              </div>
+
+              <div class="field">
+                <label for="physical_activity_hours">Physical activity <span>(hours)</span></label>
+                <input type="number" id="physical_activity_hours" name="physical_activity_hours" min="0" max="24" step="0.1" required placeholder="1">
+              </div>
+
+              <div class="field">
+                <label for="sleep_hours_per_night">Sleep per night <span>(hours)</span></label>
+                <input type="number" id="sleep_hours_per_night" name="sleep_hours_per_night" min="0" max="24" step="0.1" required placeholder="7">
+              </div>
+
+              <div class="field">
+                <label for="stress_level">Stress level</label>
+                <select id="stress_level" name="stress_level" required>
+                  <option value="" disabled selected>Choose one</option>
+                  <option value="Low">Low</option>
+                  <option value="Medium">Medium</option>
+                  <option value="High">High</option>
+                  <option value="Very High">Very High</option>
+                </select>
+              </div>
+
+            </div>
+          </fieldset>
+
+          <button type="submit" id="submit-btn" class="submit-btn">
+            <span class="btn-label">Check my score</span>
+            <span class="btn-spinner" aria-hidden="true"></span>
+          </button>
+
+          <p id="form-error" class="form-error" role="alert" hidden></p>
+
+        </form>
+
+        <div id="result-card" class="card result-card" hidden aria-live="polite">
+          <p class="result-tag">Your signal</p>
+          <div class="result-score">
+            <span id="score-value">--</span>
+            <span id="score-scale" class="score-scale">/ 10</span>
+          </div>
+          <p id="score-label" class="score-label"></p>
+          <button type="button" id="retry-btn" class="retry-btn">Take it again</button>
+        </div>
+
+      </div>
+
+    </section>
+  </div>
+
+  <section id="about" class="section section-about">
+    <div class="section-inner">
+      <h2>About ManSick</h2>
+      <p>
+        ManSick is a small machine-learning project that looks at everyday
+        habits screen time, sleep, study, stress and turns them into one
+        readable signal about student mental wellbeing. It's not a diagnosis;
+        it's a mirror.
+      </p>
+      <div class="team">
+        <h3>Made by</h3>
+        Pallav Baihbav Sambhav Manoj...
+      </div>
+    </div>
+  </section>
+
+  <section id="tips" class="section section-tips">
+    <div class="section-inner">
+      <h2>Small resets</h2>
+      <p>Short, doable things that tend to help more than willpower alone.</p>
+
+      <div class="tips-grid">
+        <article class="tip-card">
+          <h3>Take a screen break</h3>
+          <p>Step away from your phone for ten minutes every couple of hours a short walk or stretch resets focus better than another scroll.</p>
+        </article>
+        <article class="tip-card">
+          <h3>Protect your sleep window</h3>
+          <p>Keep bedtime and wake time within the same hour each day. Consistency matters more than total hours.</p>
+        </article>
+        <article class="tip-card">
+          <h3>Move a little, daily</h3>
+          <p>Even fifteen minutes of walking or stretching measurably lowers stress and lifts mood.</p>
+        </article>
+        <article class="tip-card">
+          <h3>Name what you're feeling</h3>
+          <p>Putting a word to an emotion stressed, lonely, overwhelmed takes some of its intensity away.</p>
+        </article>
+        <article class="tip-card">
+          <h3>Talk to someone</h3>
+          <p>A five-minute check-in with a friend, family member, or counselor counts. You don't have to carry it alone.</p>
+        </article>
+        <article class="tip-card">
+          <h3>Batch your notifications</h3>
+          <p>Turning off non-essential alerts, even for a few hours, cuts down on the constant context-switching that drains focus.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="videos" class="section section-videos">
+    <div class="section-inner">
+      <h2>Worth your fifteen minutes</h2>
+      <p>A few talks on stress, resilience, and emotional health.</p>
+
+      <div class="video-grid">
+        <div class="video-card">
+          <div class="video-frame">
+            <iframe
+              src="https://www.youtube-nocookie.com/embed/RcGyVTAoXEU"
+              title="Kelly McGonigal: How to make stress your friend"
+              loading="lazy"
+              allow="accelerometer; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen></iframe>
+          </div>
+        </div>
+
+        <div class="video-card">
+          <div class="video-frame">
+            <iframe
+              src="https://www.youtube-nocookie.com/embed/F2hc2FLOdhI"
+              title="Guy Winch: How to practice emotional first aid"
+              loading="lazy"
+              allow="accelerometer; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen></iframe>
+          </div>
+        </div>
+
+        <div class="video-card">
+          <div class="video-frame">
+            <iframe
+              src="https://www.youtube-nocookie.com/embed/k0GQSJrpVhM"
+              title="Guy Winch: How to fix a broken heart"
+              loading="lazy"
+              allow="accelerometer; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="blog" class="section section-blog">
+    <div class="section-inner">
+      <h2>Blog</h2>
+      <p>Coming Soon....</p>
+      <div class="blog-placeholder">
+        <p>You will be able to write blogs soom, please stay tuned for updates!.</p>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <p>Made with <span class="heart" aria-hidden="true">&hearts;</span><span class="sr-only"> love</span> by the ManSick team.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
