@@ -1,6 +1,6 @@
 pandas
 scikit-learn
-fast api
+fastapi
 uvicorn
 pydantic
 pydantic
