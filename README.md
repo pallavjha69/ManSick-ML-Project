@@ -1,5 +1,17 @@
 ﻿#ManSick
 #ManSick-ML-Project
+
+ManSick is a Machine Learning powered mental health score prediction model, which asks the users about their daily activity and return a score between 0 and 10 which refers to their approximate mental health. 
+Mansick is not a clinical model and must not be referred as one. There may be some inaccuracies while predicting. Always consult a mental health professional if you are facing any challenges. 
+This is not the final version of this project. team ManSick is working on it and bringing updates, Stay Tuned!
+
+With ❤️
+Team Mansick
+
+
+
+
+
 References- 
 1. geeks4geeks blog- https://www.geeksforgeeks.org/ai-in-mental-health-opportunities-and-challenges
 2. dataset imported from kaggle- https://www.kaggle.com/datasets/shivasingh4945/student-social-media-and-mental-health-impact
