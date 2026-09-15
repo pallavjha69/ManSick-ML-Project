@@ -16,14 +16,7 @@ The deployed project can be accessed by clicking the above link.
 
 With ❤️
 Team Mansick
-.
-.
-.
-.
-.
-.
-.
-.
+
 References- 
 1. geeks4geeks blog- https://www.geeksforgeeks.org/ai-in-mental-health-opportunities-and-challenges
 2. dataset imported from kaggle- https://www.kaggle.com/datasets/shivasingh4945/student-social-media-and-mental-health-impact
